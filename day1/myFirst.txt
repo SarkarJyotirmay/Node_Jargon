@@ -1,0 +1,3 @@
+Hello Guys :)
+Let's start node.js
+This line is mounted using fs.appendFile method.
