@@ -42,6 +42,7 @@ const Todo = () => {
       setTodos(response.data.result);
       setEditId(null);
       setIsEditing(false);
+      setInput("")
       //!
     } else {
       if (!input.trim()) {
@@ -112,7 +113,7 @@ const Todo = () => {
             onChange={(e) => setInput(e.target.value)}
           />
           <button className={styles["add-btn"]} onClick={handleSubmit}>
-            Add Task
+           {isEditing ? "Edit": "Add"}
           </button>
         </div>
         {todos.length > 0 ? (
